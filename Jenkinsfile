@@ -15,7 +15,7 @@ pipeline {
                                     }
         }
     }
-    }
+    
     stage('terraform init and apply - dev'){
       steps{
         sh returnStatus: true, script: 'terraform workspace new dev'
@@ -33,8 +33,9 @@ pipeline {
         
       }
     }
+    }   
    }
-  }
+  
 
 
 def getTerraformPath(){
